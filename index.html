@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body{
+        background: rgb(63,94,251);
+        background: radial-gradient(circle, rgba(63,94,251,1) 13%, rgba(252,88,70,0.557387920988708) 72%);
+    }
+    marquee{
+        background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(237,253,45,0.8563218390804598) 100%);
+    }
+    span{
+        display: none;
+    }
+    input:hover+span{
+        display: inline;
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(192,187,35,0.6946428229494923) 66%);
+        color: black;
+    }
+    
+    
+     input[type="radio"]:checked{
+        width: 15px;
+        height: 15px;
+    }
+    input[type="radio"]:checked+label{
+        font-size: larger;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:yellowgreen;
+    }
+
+    p{
+        display: inline;
+    }
+    input:focus{
+        background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(238,253,45,0.4482758620689655) 25%);
+    }
+    img{
+        display: none;
+    }
+    input[type="text"]:focus:valid~img#valid{
+        display: inline;
+    }
+    input[type="text"]:focus:invalid~img#invalid{
+        display: inline;
+    }
+    input[type="text"]:focus:valid~img#valid{
+        display: inline;
+    }
+    input[type="text"]:focus:invalid~img#invalid{
+        display: inline;
+    }
+    input[type="tel"]:focus:valid~img#valid{
+        display: inline;
+    }
+    input[type="tel"]:focus:invalid~img#invalid{
+        display: inline;
+    }
+    input[type="Email"]:focus:valid~img#valid{
+        display: inline;
+    }
+    input[type="Email"]:focus:invalid~img#invalid{
+        display: inline;
+    }
+    input[type="password"]:focus:valid~img#valid{
+        display: inline;
+    }
+    input[type="password"]:focus:invalid~img#invalid{
+        display: inline;
+    }
+    input[type="password"]:focus:valid~img#valid{
+        display: inline;
+    }
+    input[type="password"]:focus:invalid~img#invalid{
+        display: inline;
+    }
+    input[type="text"]:focus:valid~img#valid{
+        display: inline;
+    }
+    input[type="text"]:focus:invalid~img#invalid{
+        display: inline;
+    }
+    input:required{
+            border: 2px dashed yellowgreen;
+        }
+        /* input:optional{
+            border: 2px dashed green;
+        } */
+        input[readonly]{
+            background-color: gray ;
+        }
+        input[disabled]{
+            border: 2px dashed yellowgreen;
+            background-color: gray;
+        }
+
+   </style>
+</head>
+<body>
+    <marquee>Course Registration form</marquee>
+     <form>
+    <fieldset>
+        <table>
+        <legend>PERSONAL DETAILS</legend>
+        <tr>
+            <td><label>First Name</label></td>
+            <td><input type="text" value="name"required minlength="10" maxlength="12"><span>Enter your first Name</span>
+            <img src="tickmark.jfif" height="15px" weigth="15" id="valid"></td>
+            <img src="wrongmark.jfif" height="15px" weigth="15" id="invalid"></td>
+        </tr>
+        <tr>
+            <td><label>Last Name</label></td>
+            <td><input type="text" value="lname"disabled><span>Enter your Last Name</span><img src="tickmark.jfif" height="15px" weigth="15" id="valid"></td>
+            <img src="wrongmark.jfif" height="15px" weigth="15" id="invalid"></td></td>
+        </tr>
+        <tr>
+            <td><label>Mobile Number</label></td>
+            <td><input type="tel" value="mobile" pattern="[6-9]{1}[0-9]{9}" required><span>Enter your mobile number
+           </span><img src="tickmark.jfif" height="15px" weigth="15" id="valid"></td>
+            <img src="wrongmark.jfif" height="15px" weigth="15" id="invalid"></td></td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td><input type="email" value="email" required><span>Enter your Email </span>
+                <img src="tickmark.jfif" height="15px" weigth="15" id="valid"></td>
+                <img src="wrongmark.jfif" height="15px" weigth="15" id="invalid"></td></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" value="password" min="5" max="10" required><span>Enter your Password</span>
+                <img src="tickmark.jfif" height="15px" weigth="15" id="valid"></td>
+                <img src="wrongmark.jfif" height="15px" weigth="15" id="invalid"></td></td>
+        </tr>
+        <tr>
+            <td><label>Confirm Password</label></td>
+            <td><input type="password" value="cpassword" min="5" max="10"><span>Enter ConfirmPassword</span><img src="tickmark.jfif" height="15px" weigth="15" id="valid"></td>
+            <img src="wrongmark.jfif" height="15px" weigth="15" id="invalid"></td></td>
+        </tr>
+        <tr>
+            <td><label>Date-of-Birth</label></td>
+            <td><input type="date" value="birth"><span>Enter date of birth</span></td>
+        </tr>
+        <tr>
+            <td><label>Gender</label></td>
+            <td><input type="radio" name="gender"><p>Male</p>
+            <input type="radio" name="gender"><p>female</p>
+            <input type="radio" name="gender"><p>others</p></td>
+    </tr>
+    <tr>
+        <td><label>Select-country</label></td>
+        <td><select name="Select-country">
+            <option value="in">India</option>
+            <option value="usa">USA</option>
+            <option value="ch">china</option>
+            <option value="fr">France</option><span>select country</span>
+        </td>
+    </tr>
+    <td><label>Upload picture</label></td>
+    <td><input type="file"><span>upload a picture</picture></span></td>
+    </table>
+    </fieldset>
+    <fieldset>
+        <table>
+        <legend>Course Details</legend>
+        <tr>
+            <td><label>Select Course</label></td>
+            <td><select name="select-course">
+                <option value="py">python full stack</option>
+                <option value="ja">java full stack</option>
+                <option value="me">Mern stack</option><span>select course</span></td>
+        </tr>
+        <tr>
+        <td><label>Delivery Mode</label></td>
+        <td><input type="checkbox">online</td>
+        <td><input type="checkbox">offline</td><span>enter which type of mode</span>
+        </tr>
+        <tr>
+            <td><label>comments</label></td>
+            <td><textarea rows="5" column="5"></textarea></td>
+        </tr>
+    </table>
+    </fieldset>
+        <input type="submit">
+        </form>
+</body>
+</html>
